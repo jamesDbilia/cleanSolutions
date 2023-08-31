@@ -1,0 +1,87 @@
+.contact-us {
+  background-color: rgb(43, 43, 43);
+  display: grid;
+  grid-template-columns:
+    minmax(8%, 1fr) minmax(50rem, 60rem) minmax(15rem, 45rem)
+    minmax(8%, 1fr);
+  grid-template-rows: max-content;
+  align-content: center;
+  border: none;
+  padding: 3rem 0;
+  font-weight: 200;
+  @include respond(tab-land) {
+    background-color: rgb(41, 41, 41);
+
+    grid-template-columns: minmax(5%, 1fr) minmax(15rem, 90rem) minmax(5%, 1fr);
+    grid-template-rows: max-content;
+  }
+  &__text {
+    grid-column: 2/3;
+    justify-self: start;
+    &--cursive {
+      font-size: 2.6rem;
+      // font-weight: 300;
+      font-family: 'Kaushan Script', cursive !important;
+      color: $color-secondary;
+    }
+    @include respond(tab-land) {
+      justify-self: center;
+      text-align: center;
+    }
+  }
+  &__header {
+    color: #fff;
+    font-size: 2rem;
+    @include respond(tab-land) {
+      font-size: 2.5rem;
+    }
+  }
+  &__secondary {
+    color: rgb(201, 201, 201);
+    font-size: 1.5rem;
+    font-weight: 200;
+
+    @include respond(tab-land) {
+      width: 80%;
+      text-align: center;
+      margin: 1rem auto;
+    }
+  }
+  &__button-section {
+    grid-column: 3/4;
+    justify-self: end;
+    align-self: center;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem rgb(139, 139, 139);
+    }
+    @include respond(tab-land) {
+      background-color: rgb(41, 41, 41);
+      justify-self: center;
+      border: none;
+      margin: 2rem;
+      grid-column: 2/3;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 1rem 3rem;
+    background-color: $color-primary;
+    border-radius: 2px;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem rgb(51, 51, 51);
+    }
+  }
+}

@@ -1,0 +1,195 @@
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+  margin: 0 10rem;
+  @include respond(tab-port) {
+    margin: 0 20rem;
+  }
+  @include respond(phone) {
+    margin: 0 10rem;
+  }
+  &__section {
+    display: grid;
+    grid-column: 2/3;
+    @include respond(tab-port) {
+      grid-column: 1/2;
+      margin: 2rem 0;
+      grid-row: 2/3;
+    }
+    grid-row: 1/2;
+    align-items: center;
+    margin: 6rem 0 0 3rem;
+
+    grid-template-rows: repeat(6, minmax(min-content, 6rem));
+  }
+  &__form {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 6rem 0 0 0;
+    padding: 0 2rem;
+    @include respond(tab-port) {
+      padding: 0;
+    }
+    &-header {
+      font-size: 3.5rem;
+      color: #000;
+      grid-row: 1/2;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__label {
+    font-size: 2rem;
+    color: #777;
+    &--name {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    &--email {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      justify-self: start;
+      margin-left: 5%;
+    }
+    &--subject {
+      grid-row: 4/5;
+    }
+    &--position {
+      grid-row: 4/5;
+    }
+    &--message {
+    }
+  }
+
+  &__button {
+    grid-row: 9/10;
+    border: none;
+    grid-column: 2/3;
+    justify-self: end;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    background-color: $color-secondary;
+    transition: all 0.5s ease;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem #777;
+    }
+  }
+  &__form-error {
+    font-size: 1.4rem;
+    color: rgb(161, 27, 27);
+    border-top: 3px solid rgb(161, 27, 27);
+    grid-row: 11/12;
+    grid-column: 1/2;
+    &--files {
+      grid-row: 3/4;
+      margin-top: 1rem;
+    }
+  }
+  &__form-no-error {
+  }
+  &__input {
+    height: 3.5rem;
+    font-size: 2rem;
+    color: rgb(75, 75, 75);
+    font-weight: 300;
+    font-family: Titillium Web, sans-serif;
+    font-weight: 100;
+    border: 1px solid #c9c9c9e7;
+    border-radius: 0;
+
+    width: 100%;
+    &:focus {
+      outline: 1px solid #c9c9c9e7;
+    }
+
+    &--name {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      width: 95%;
+    }
+    &--email {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      width: 100%;
+      width: 95%;
+      justify-self: end;
+    }
+
+    &--subject {
+      width: 100%;
+      grid-column: 1/-1;
+    }
+    &--position {
+      width: 100%;
+      grid-column: 1/-1;
+    }
+    &--textarea {
+      height: 15rem;
+    }
+
+    &--message {
+      width: 100%;
+      grid-column: 1/-1;
+      height: 15rem;
+    }
+    &--coverLetter {
+      width: 100%;
+      grid-column: 1/-1;
+      height: 15rem;
+    }
+  }
+
+  &__header {
+    font-size: 2rem;
+    align-self: center;
+    color: #777;
+    grid-row: 1/2;
+  }
+  &__paragraph {
+    color: #777;
+    margin-bottom: 1.5rem;
+    &--1 {
+    }
+    &--2 {
+      margin-top: 1.5rem;
+    }
+  }
+  &__secondary-header {
+    margin-bottom: 0.5rem;
+
+    color: #222;
+    font-size: 3rem;
+  }
+  &__info {
+    color: #777;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+  &__details {
+    color: #777;
+    font-size: 1.8rem;
+    text-decoration: none;
+    &--email {
+      cursor: pointer;
+    }
+  }
+}

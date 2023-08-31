@@ -1,0 +1,19 @@
+.label-text {
+  color: #333;
+  font-size: 1.1rem;
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+  padding: 0.1rem 0;
+  cursor: pointer;
+  &__zoom {
+    padding-top: 1.5rem;
+    color: rgb(7, 6, 83);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.gm-ui-hover-effect {
+  display: none !important;
+}

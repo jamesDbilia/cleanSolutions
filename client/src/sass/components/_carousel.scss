@@ -1,0 +1,223 @@
+.fit {
+  object-fit: cover;
+  width: 100%;
+  height: 50rem;
+
+  @media only screen and (max-width: 50em) {
+    height: 35rem;
+  }
+
+  z-index: -2;
+  backface-visibility: hidden;
+
+  // animation: pictureFade 1s ease 1s;
+  // animation-fill-mode: backwards;
+}
+
+// hiding bootstrap previous and next text for carousel buttons
+.sr-only {
+  color: transparent;
+  z-index: -1000;
+  visibility: hidden;
+}
+
+.carousel {
+  animation-fill-mode: backwards;
+  background-color: rgb(43, 43, 43);
+  &__page-buffer {
+    width: 5.5rem;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50rem;
+    @media only screen and (max-width: 50em) {
+      height: 35rem;
+    }
+
+    text-align: center;
+    display: grid;
+    align-items: center;
+    z-index: 1;
+    grid-template-rows: 50rem;
+    @media only screen and (max-width: 50em) {
+      grid-template-rows: 35rem;
+    }
+
+    grid-template-columns: minmax(11%, 1fr) minmax(45rem, 105rem) minmax(
+        11%,
+        1fr
+      );
+    &--1 {
+      justify-content: center;
+    }
+    &--2 {
+      text-align: left;
+      display: grid;
+      justify-content: start;
+    }
+    &--3 {
+      text-align: end;
+      display: grid;
+      justify-content: end;
+    }
+  }
+  &__inner-container {
+    margin-top: 5rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  &__header-3 {
+    font-size: 2.6rem;
+    &--2,
+    &--3 {
+      margin-bottom: 2.5rem;
+    }
+    @media only screen and (max-width: 51em) {
+      font-size: 2.3rem;
+    }
+    @media only screen and (max-width: 40em) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: 25em) {
+      font-size: 1.6rem;
+    }
+    color: rgb(240, 240, 240);
+    text-transform: uppercase;
+    font-weight: 300;
+    animation: carouselHeader3Up 0.5s ease 0.5s;
+    animation-fill-mode: backwards;
+  }
+  &__header-1 {
+    font-size: 6.2rem;
+    font-weight: 600;
+    @media only screen and (max-width: 63.9em) {
+      font-size: 5.2rem;
+    }
+    @media only screen and (max-width: 51em) {
+      font-size: 4.2rem;
+    }
+    @media only screen and (max-width: 40em) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (max-width: 25em) {
+      font-size: 3rem;
+    }
+    margin-top: -2rem;
+    text-transform: uppercase;
+    color: #fff;
+
+    animation: carouselHeader1Up 0.5s ease 1.3s;
+    animation-fill-mode: backwards;
+  }
+  &__tag-line {
+    font-size: 2.5rem;
+    font-weight: 500;
+    @media only screen and (max-width: 51em) {
+      font-size: 2.2rem;
+    }
+    @media only screen and (max-width: 40em) {
+      font-size: 1.9rem;
+    }
+    @media only screen and (max-width: 25em) {
+      font-size: 1.7rem;
+    }
+
+    color: rgb(240, 238, 238);
+
+    animation: carouselTagLineUp 0.5s ease 1.7s;
+    animation-fill-mode: backwards;
+  }
+  &__rectangle {
+    width: 3.7rem;
+    @media only screen and (max-width: 40em) {
+      width: 2.6rem;
+      height: 0.7rem;
+    }
+    @media only screen and (max-width: 25em) {
+      width: 1.8rem;
+      height: 0.49rem;
+    }
+    margin: 2rem;
+    height: 1rem;
+    margin-top: 3rem;
+    &--left {
+      animation: left 0.5s ease 1s;
+      animation-fill-mode: backwards;
+    }
+    &--right {
+      animation: right 0.5s ease 1s;
+      animation-fill-mode: backwards;
+    }
+  }
+  &__welcome-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button {
+    border: none;
+    color: #fff;
+    padding: 1.3rem 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    @media only screen and (max-width: 50em) {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: 40em) {
+      padding: 0.7rem 1.4rem;
+      font-size: 1rem;
+    }
+
+    border-radius: 2px;
+    background-color: $color-secondary;
+    animation: carouselButtonUp 0.5s ease 2s;
+    animation-fill-mode: backwards;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &-container {
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem #777;
+    }
+    &-end {
+      animation: exit 0.1s ease;
+      border: none;
+      color: #fff;
+      padding: 1.5rem 2.7rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-radius: 2px;
+      background-color: $color-secondary;
+    }
+  }
+}
+
+.carousel-control {
+  &-next-icon,
+  &-prev-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.carousel-control-next-icon {
+  margin-left: 3rem;
+}
+.carousel-indicators li {
+  width: 3rem;
+  height: 0.3rem;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+}

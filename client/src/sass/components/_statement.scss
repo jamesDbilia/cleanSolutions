@@ -1,0 +1,22 @@
+.statement {
+  width: 100%;
+  background-color: $color-secondary;
+
+  display: grid;
+  grid-template-columns: minmax(8%, 1fr) minmax(35rem, 105rem) minmax(8%, 1fr);
+  justify-content: center;
+  align-items: center;
+  // grid-template-rows: min-content;
+  @include respond(tab-port) {
+  }
+  &__text {
+    padding: 3rem 0;
+    color: #fff;
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+}

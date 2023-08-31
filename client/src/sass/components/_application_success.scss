@@ -1,0 +1,10 @@
+.application-success {
+  height: 60vh;
+  transform: translateY(20rem);
+  margin-left: 10rem;
+  &__text {
+    font-size: 1.5rem;
+    width: 70%;
+    font-weight: 300;
+  }
+}

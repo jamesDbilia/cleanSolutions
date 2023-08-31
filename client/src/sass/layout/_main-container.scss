@@ -1,0 +1,17 @@
+.main-container {
+  display: grid;
+  grid-template-rows: 6rem 50rem repeat(8, min-content);
+  grid-template-columns: 100vw;
+  overflow: hidden;
+  @media only screen and (max-width: 50em) {
+    grid-template-rows: 6rem 35rem repeat(8, min-content);
+  }
+  &__buffer {
+    height: 0.5rem;
+  }
+}
+
+.section-test {
+  background-color: #fff;
+  height: 100vh;
+}
