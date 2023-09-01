@@ -16,12 +16,13 @@ function About(props) {
   return (
     <MainContainer>
       {/* <UnderConstruction /> */}
-      <CarouselSection />
+       <CarouselSection />
+ 
       <ContactUsBar id='contact' />
       <InfoGraphic />
       <Statement />
       <Attributes />
-      <ContactUsBar />
+     <ContactUsBar />  
     </MainContainer>
   );
 }

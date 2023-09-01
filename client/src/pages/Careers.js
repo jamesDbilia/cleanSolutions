@@ -4,6 +4,7 @@ import MainContainer from '../components/MainContainer';
 import CareerSection from '../components/CareerSection';
 
 function Careers({ location }) {
+  
   return (
     <MainContainer>
       <Banner img='grow' />

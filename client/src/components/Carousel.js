@@ -13,22 +13,22 @@ function CarouselSection() {
 
   const { width } = useWindowDimensions();
 
-  useEffect(() => {
-    const heightOffset = (width) => {
-      setWindowOffset(
-        width >= 1800
-          ? -75
-          : width > 1200 && width < 1800
-          ? -65
-          : width <= 1200 && width > 900
-          ? -55.5
-          : width <= 900 && width > 650
-          ? -45
-          : -36
-      );
-    };
-    return heightOffset(width);
-  }, [width]);
+  // useEffect(() => {
+  //   const heightOffset = (width) => {
+  //     setWindowOffset(
+  //       width >= 1800
+  //         ? -75
+  //         : width > 1200 && width < 1800
+  //         ? -65
+  //         : width <= 1200 && width > 900
+  //         ? -55.5
+  //         : width <= 900 && width > 650
+  //         ? -45
+  //         : -36
+  //     );
+  //   };
+  //   return heightOffset(width);
+  // }, [width]);
   return (
     <>
       <Carousel>

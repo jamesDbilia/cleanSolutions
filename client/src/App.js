@@ -60,7 +60,8 @@ const AppRoutes = () => (
         <Route exact path='/'>
           <About />
         </Route>
-        <Redirect from='/*' to='/' />
+        {/* 
+        <Redirect from='/*' to='/' /> */}
       </Switch>
       {/* </Suspense> */}
       <Footer />

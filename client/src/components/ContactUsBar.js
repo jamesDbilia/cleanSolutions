@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 function ContactUsBar({ id }) {
@@ -17,9 +18,7 @@ function ContactUsBar({ id }) {
         </h3>
       </div>
       <div className='contact-us__button-section'>
-        <Link to='/contact#contact-form' className='contact-us__button'>
-          Contact Us Today!
-        </Link>
+        <NavLink to='/contact' className='contact-us__button'>Contact Us</NavLink>
       </div>
     </div>
   );

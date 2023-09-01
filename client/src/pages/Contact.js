@@ -4,7 +4,7 @@ import { setBanner } from '../actions/InvViewActions';
 import { connect } from 'react-redux';
 
 import ContactForm from '../components/ContactForm';
-import GoogleMaps from '../components/GoogleMaps';
+  import GoogleMaps from '../components/GoogleMaps';
 import ContactInfo from '../components/ContactInfo';
 import useWindowDimensions from '../utils/ScreenWidth';
 
@@ -40,10 +40,10 @@ function Contact({ inView: { banner }, setBanner }) {
         style={{ height: banner ? `${rem * 14.6}rem` : `${rem * 10}rem` }}
         ref={ref}
       ></div>
-      <GoogleMaps />
+      {/* <GoogleMaps /> */}
       <div className='contact-info'>
         <ContactInfo />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </div>
     </section>
   );
